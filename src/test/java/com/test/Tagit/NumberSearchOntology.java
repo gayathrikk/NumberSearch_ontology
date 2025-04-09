@@ -114,17 +114,22 @@ public class NumberSearchOntology {
 	@Test(priority = 3)
 	public void Direct_Draw_page() throws InterruptedException {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 50);
-			Actions actions = new Actions(driver);
-			actions.keyDown(Keys.SHIFT).sendKeys("o").keyUp(Keys.SHIFT).build().perform();
+            Actions actions = new Actions(driver);
+            actions.keyDown(Keys.SHIFT).sendKeys("m").keyUp(Keys.SHIFT).build().perform();
+            System.out.println("Action executed successfully!");
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            System.err.println("Error executing action: " + e.getMessage());
+        }
 
-			System.out.println("Action executed successfully!");
-
-		} catch (NoSuchElementException e) {
-			System.out.println("Element not found: " + e.getMessage());
-		} catch (Exception e) {
-			System.out.println("Error executing action: " + e.getMessage());
-		}
+        try {
+            Actions actions = new Actions(driver);
+            actions.keyDown(Keys.SHIFT).sendKeys("o").keyUp(Keys.SHIFT).build().perform();
+            System.out.println("Action executed successfully!");
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            System.err.println("Error executing action: " + e.getMessage());
+        }
 
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
